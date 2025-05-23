@@ -12,7 +12,7 @@ const CTA = () => {
         <p className={styles.description}>
           Turn your traffic into profit with smarter, faster monetization.
         </p>
-        <Link href="/contact" className={styles.button}>
+        <Link href="/contacts" className={styles.button}>
           Contact Us
         </Link>
       </div>

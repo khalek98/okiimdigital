@@ -57,7 +57,7 @@ const WhatWeDo = () => {
             boost performance and stay fully compliant, without hurting user
             experience.
           </p>
-          <Link href="/contact" className={styles.button}>
+          <Link href="/contacts" className={styles.button}>
             Let’s Start
           </Link>
         </div>

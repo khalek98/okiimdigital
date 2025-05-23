@@ -36,7 +36,7 @@ const Hero = () => {
           compliant, user-first solutions.
         </p>
 
-        <Link href={"/contact"} className={styles.Button}>
+        <Link href={"/contacts"} className={styles.Button}>
           <span>Book a consultation</span>
           <div className={styles.ButtonArrowWrapper}>
             <ArrowIcon className={styles.ButtonArrowIcon} />
