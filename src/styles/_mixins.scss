@@ -1,0 +1,163 @@
+@import "@/styles/_media-mixin.scss";
+@import "@/styles/_variables.scss";
+
+@mixin btn-black {
+  padding: 12px 20px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+
+  border-radius: var(--8, 8px);
+  border: 1px solid var(--black-5, rgba(0, 0, 0, 0.05));
+  background: var(--black-100, #111);
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  span {
+    color: var(--white-100, #fff);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 19.2px */
+    letter-spacing: -0.16px;
+  }
+
+  svg {
+    width: 18px;
+    height: auto;
+
+    flex-shrink: 0;
+    fill: #fff;
+
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    background: var(--black-70, rgba(17, 17, 17, 0.7));
+
+    svg {
+      transform: translateX(5px);
+    }
+  }
+
+  @include media-sm {
+    width: auto;
+  }
+}
+
+@mixin btn-gradient {
+  position: relative;
+  z-index: 1;
+  padding: 8px 12px 8px 20px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  color: #111;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.2px */
+  letter-spacing: -0.6px;
+
+  border-radius: 60px;
+  border: 1px solid var(--black-5, rgba(0, 0, 0, 0.05));
+
+  background: linear-gradient(
+    128deg,
+    var(--color-yellow-70, #d9f273) 0%,
+    var(--color-yellow-50, #bfea15) 100%
+  );
+
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: #d9f273;
+
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin title-H2 {
+  padding: 6px 20px;
+
+  color: var(--black-70, rgba(17, 17, 17, 0.7));
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+
+  border-radius: var(--40, 40px);
+  border: 1px solid var(--black-5, rgba(0, 0, 0, 0.05));
+  background: var(--white-100, #fff);
+
+  @include media-lg {
+    padding: 6px 24px;
+    font-size: 16px;
+  }
+
+  @include media-xl {
+    font-size: 18px;
+  }
+}
+
+@mixin subtitle {
+  color: var(--black-100, #111);
+  text-align: center;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 38.4px */
+  letter-spacing: -0.32px;
+
+  @include media-lg {
+    font-size: 40px;
+    letter-spacing: 0;
+  }
+
+  @include media-xl {
+    font-size: 48px;
+  }
+}
+
+@mixin description {
+  color: var(--black-70, rgba(17, 17, 17, 0.7));
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+
+  @include media-lg {
+    font-size: 16px;
+  }
+}

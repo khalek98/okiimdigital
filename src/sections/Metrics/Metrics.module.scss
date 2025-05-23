@@ -1,0 +1,86 @@
+@import "@/styles/_media-mixin.scss";
+@import "@/styles/_variables.scss";
+@import "@/styles/_mixins.scss";
+
+.section {
+  position: relative;
+  padding: 90px 0;
+
+  background-color: #fff;
+
+  @include media-lg {
+    padding: 120px 0;
+  }
+}
+
+.metricList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.metricItem {
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  border-radius: var(--20, 20px);
+  background: var(
+    --gradient-green,
+    linear-gradient(
+      128deg,
+      var(--color-yellow-70, #d9f273) 0%,
+      var(--color-yellow-50, #bfea15) 100%
+    )
+  );
+}
+
+.metricHead {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.metricIconWrapper {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: var(--black-100, #111);
+}
+
+.metricIcon {
+  width: 24px;
+  height: 24px;
+
+  &_3 {
+    width: 20px;
+    height: auto;
+  }
+}
+
+.metricTitle {
+  color: var(--black-100, #111);
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 57.6px */
+  letter-spacing: 0.48px;
+}
+
+.metricDescription {
+  color: var(--black-70, rgba(17, 17, 17, 0.7));
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 28px */
+  letter-spacing: 0.4px;
+}

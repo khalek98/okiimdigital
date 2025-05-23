@@ -1,0 +1,83 @@
+@import "@/styles/_media-mixin.scss";
+@import "@/styles/_variables.scss";
+@import "@/styles/_mixins.scss";
+
+.CookieBar {
+  z-index: 999;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: #111;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.Inner {
+  padding: 16px 8px;
+
+  display: grid;
+  justify-items: center;
+  row-gap: 16px;
+
+  justify-content: center;
+  grid-template-columns: auto;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+
+  @include media-lg {
+    grid-template-columns: repeat(2, max-content);
+  }
+}
+
+.Message {
+  display: flex;
+  align-items: center;
+}
+
+.Buttons {
+  display: grid;
+  justify-items: center;
+  row-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.Button {
+  padding: 8px 24px;
+
+  color: var(--White, #fff);
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+  letter-spacing: 0.32px;
+
+  border-radius: 50px;
+  border: 1px solid #fff;
+  background: none;
+
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.Link {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #fff;
+  text-decoration: underline;
+
+  transition: text-decoration 0.3s ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}

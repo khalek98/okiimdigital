@@ -1,0 +1,90 @@
+@import "@/styles/_media-mixin.scss";
+
+.CookieSection {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  background-color: #fffcf7;
+
+  @include media-md {
+    padding-top: 80px;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+
+    color: #000000;
+    text-align: center;
+  }
+}
+
+.CookieTextWrapper {
+  margin-top: 50px;
+
+  display: grid;
+  row-gap: 20px;
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+
+    color: #000000;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+
+    color: #000000;
+
+    @include media-md {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  h4 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+
+    color: #000000;
+
+    @include media-md {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+
+    display: grid;
+    row-gap: 5px;
+
+    li {
+      display: inline-block;
+
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      color: #000000;
+    }
+  }
+}
