@@ -178,6 +178,10 @@
     order: 2;
     flex-direction: row;
   }
+
+  @include media-xl {
+    gap: 36px;
+  }
 }
 
 .Link {
