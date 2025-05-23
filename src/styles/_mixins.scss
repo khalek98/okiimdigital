@@ -5,7 +5,7 @@
   position: relative;
   z-index: 1;
   padding: 8px 20px;
-  width: 100%;
+  width: auto;
 
   display: flex;
   justify-content: center;
@@ -52,6 +52,10 @@
     &:before {
       opacity: 1;
     }
+  }
+
+  @include media-md {
+    font-size: 20px;
   }
 }
 
@@ -105,10 +109,10 @@
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 140%; /* 19.6px */
 
-  @include media-lg {
-    font-size: 16px;
+  @include media-md {
+    font-size: 18px;
   }
 }

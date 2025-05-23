@@ -48,22 +48,8 @@
 }
 
 .Button {
-  padding: 8px 24px;
-
-  color: var(--White, #fff);
-  font-family: "Inter";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 150%; /* 24px */
-  letter-spacing: 0.32px;
-
-  border-radius: 50px;
-  border: 1px solid #fff;
-  background: none;
-
-  text-transform: uppercase;
-  cursor: pointer;
+  @include btn-gradient;
+  width: max-content;
 }
 
 .Link {

@@ -30,18 +30,26 @@
     border-radius: 24px;
   }
 
+  @include media-sm {
+    width: 100%;
+    max-width: 720px;
+  }
+
   @include media-md {
-    max-width: 768px;
+    padding: 12px 30px;
+    max-width: 880px;
   }
 
   @include media-lg {
-    padding: 12px 12px 12px 20px;
-    top: 20px;
-    max-width: 810px;
+    max-width: 1080px;
   }
 
   @include media-xl {
-    max-width: 980px;
+    max-width: 1320px;
+  }
+
+  @include media-2xl {
+    max-width: 1640px;
   }
 }
 
@@ -80,6 +88,10 @@
 .Logo {
   width: auto;
   height: 38px;
+
+  @include media-md {
+    height: 48px;
+  }
 }
 
 .Nav {
@@ -102,7 +114,7 @@
     }
   }
 
-  @include media-lg {
+  @include media-md {
     display: flex;
     margin: 0;
 
@@ -122,7 +134,7 @@
   align-items: center;
   gap: 20px;
 
-  @include media-lg {
+  @include media-md {
     flex-direction: row;
   }
 }
@@ -144,20 +156,21 @@
     color: var(--black-100, #111);
   }
 
-  @include media-2xl {
+  @include media-md {
     font-size: 16px;
-  }
-
-  @include media-2xl {
-    font-size: 18px;
   }
 }
 
 .buttonContact {
   display: none;
 
-  @include media-lg {
+  @include media-md {
     @include btn-gradient;
+    font-size: 16px;
+  }
+
+  @include media-2xl {
+    font-size: 18px;
   }
 }
 
@@ -192,7 +205,7 @@
     }
   }
 
-  @include media-lg {
+  @include media-md {
     display: none;
   }
 }

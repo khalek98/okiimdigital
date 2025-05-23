@@ -7,12 +7,21 @@
   padding: 0;
 
   background: #fff;
+
+  @include media-md {
+    padding: 100px 0;
+  }
 }
 
 .container {
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @include media-md {
+    flex-direction: row;
+    column-gap: 100px;
+  }
 }
 
 .head {
@@ -27,6 +36,7 @@
 
 .subtitle {
   margin-top: 40px;
+
   color: var(--black-100, #111);
   font-family: Inter;
   font-size: 48px;
@@ -46,6 +56,15 @@
 .button {
   @include btn-gradient;
   margin-top: 40px;
+  width: 100%;
+
+  @include media-xs {
+    width: auto;
+  }
+
+  @include media-md {
+    padding: 12px 40px;
+  }
 }
 
 .faqList {
@@ -65,12 +84,16 @@
   &:last-child {
     border-top: none;
   }
+
+  @include media-md {
+    padding: 36px 20px;
+  }
 }
 
 .faqHead {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   cursor: pointer;
 }
@@ -86,6 +109,7 @@
 }
 
 .faqToggle {
+  margin-top: 3px;
   position: relative;
 
   flex-shrink: 0;
@@ -134,6 +158,10 @@
   &.show {
     margin-top: 28px;
   }
+
+  @include media-md {
+    padding-right: 40px;
+  }
 }
 
 .faqSubtitle {
@@ -154,4 +182,8 @@
   font-weight: 400;
   line-height: 26px; /* 162.5% */
   letter-spacing: 0.32px;
+
+  @include media-lg {
+    font-size: 18px;
+  }
 }

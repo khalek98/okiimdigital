@@ -12,6 +12,7 @@
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   border-radius: 68px;
   border: 1px solid var(--stroke, #010101);
@@ -27,6 +28,12 @@
   font-weight: 500;
   line-height: 48px; /* 114.286% */
   letter-spacing: 0.84px;
+
+  @include media-lg {
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 0.96px;
+  }
 }
 
 .description {
@@ -46,4 +53,13 @@
   @include btn-gradient;
 
   margin-top: 48px;
+  width: 100%;
+
+  @include media-xs {
+    width: auto;
+  }
+
+  @include media-md {
+    padding: 12px 40px;
+  }
 }

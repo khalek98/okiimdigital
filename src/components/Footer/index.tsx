@@ -36,7 +36,9 @@ const Footer = () => {
               <div className={styles.InfoTitle}>Address:</div>
 
               <address className={styles.InfoValue}>
-                Herengracht 124, Amsterdam 1015BT, Netherlands
+                Herengracht 124, Amsterdam
+                <br />
+                1015BT, Netherlands
               </address>
             </div>
           </div>

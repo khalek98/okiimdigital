@@ -7,12 +7,20 @@
   padding: 40px 0 20px;
 
   background: #111;
+
+  @include media-md {
+    padding: 50px 0;
+  }
 }
 
 .Container {
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @include media-md {
+    padding: 0 40px;
+  }
 }
 
 .FooterContent {
@@ -22,6 +30,14 @@
   justify-content: space-between;
   align-items: center;
   gap: 40px;
+
+  @include media-md {
+    align-items: flex-start;
+  }
+
+  @include media-lg {
+    gap: 68px;
+  }
 }
 
 .Logo {
@@ -37,6 +53,24 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+
+  width: 100%;
+
+  @include media-md {
+    order: 2;
+    margin-left: auto;
+    width: auto;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  @include media-lg {
+    gap: 60px;
+  }
+
+  @include media-xl {
+    gap: 80px;
+  }
 }
 
 .InfoItem {
@@ -87,6 +121,15 @@
   );
   border: none;
   cursor: pointer;
+
+  @include media-md {
+    order: 3;
+  }
+
+  @include media-lg {
+    width: 78px;
+    height: 78px;
+  }
 }
 
 .ArrowIcon {
@@ -102,6 +145,11 @@
   gap: 20px;
 
   border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+  @include media-md {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .Copyright {
@@ -114,6 +162,10 @@
   font-weight: 400;
   line-height: 26px; /* 162.5% */
   letter-spacing: 1px;
+
+  @include media-md {
+    order: 1;
+  }
 }
 
 .Links {
@@ -121,6 +173,11 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+
+  @include media-md {
+    order: 2;
+    flex-direction: row;
+  }
 }
 
 .Link {

@@ -8,8 +8,8 @@
 
   background-color: #fff;
 
-  @include media-lg {
-    padding: 120px 0;
+  @include media-md {
+    padding: 100px 0;
   }
 }
 
@@ -17,12 +17,18 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @include media-md {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .metricItem {
   padding: 30px;
 
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 20px;
 

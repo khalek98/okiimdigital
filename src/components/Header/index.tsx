@@ -90,7 +90,7 @@ const Header: FC<HeaderInterface> = ({ darkBG }) => {
           </nav>
 
           <button onClick={onOpenForm} className={styles.buttonContact}>
-            Book a consultation
+            Contact Us
           </button>
 
           <button
@@ -123,7 +123,10 @@ const Header: FC<HeaderInterface> = ({ darkBG }) => {
           </ul>
         </nav>
       </header>
-      <div className={cn(styles.overlay, { [styles.open]: isMenuOpen })}></div>
+      <div
+        onClick={onCloseMenu}
+        className={cn(styles.overlay, { [styles.open]: isMenuOpen })}
+      ></div>
     </>
   );
 };
