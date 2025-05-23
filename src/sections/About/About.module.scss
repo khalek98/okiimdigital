@@ -25,6 +25,10 @@
     align-items: flex-start;
     justify-items: start;
   }
+
+  @include media-2xl {
+    column-gap: 150px;
+  }
 }
 
 .title {
