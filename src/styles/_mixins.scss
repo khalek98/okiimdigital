@@ -1,59 +1,10 @@
 @import "@/styles/_media-mixin.scss";
 @import "@/styles/_variables.scss";
 
-@mixin btn-black {
-  padding: 12px 20px;
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 10px;
-
-  border-radius: var(--8, 8px);
-  border: 1px solid var(--black-5, rgba(0, 0, 0, 0.05));
-  background: var(--black-100, #111);
-
-  transition: all 0.3s ease;
-  cursor: pointer;
-
-  span {
-    color: var(--white-100, #fff);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 120%; /* 19.2px */
-    letter-spacing: -0.16px;
-  }
-
-  svg {
-    width: 18px;
-    height: auto;
-
-    flex-shrink: 0;
-    fill: #fff;
-
-    transition: all 0.3s ease;
-  }
-
-  &:hover {
-    background: var(--black-70, rgba(17, 17, 17, 0.7));
-
-    svg {
-      transform: translateX(5px);
-    }
-  }
-
-  @include media-sm {
-    width: auto;
-  }
-}
-
 @mixin btn-gradient {
   position: relative;
   z-index: 1;
-  padding: 8px 12px 8px 20px;
+  padding: 8px 20px;
   width: 100%;
 
   display: flex;
