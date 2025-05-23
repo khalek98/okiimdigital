@@ -3,14 +3,12 @@ import Link from "next/link";
 import cn from "classnames";
 
 import LogoSvg from "@/assets/icons/logo.svg";
-import { useAppContext } from "@/context/AppContext";
 import { HeaderInterface } from "@/info/info.types";
 
 import styles from "./Header.module.scss";
 import { info } from "@/info";
 
 const Header: FC<HeaderInterface> = ({ darkBG }) => {
-  const { setShowForm, showForm } = useAppContext();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [fixMenu, setFixMenu] = useState<boolean>(false);
   const HeaderRef = useRef<HTMLElement>(null);
@@ -34,18 +32,13 @@ const Header: FC<HeaderInterface> = ({ darkBG }) => {
     setIsMenuOpen(false);
   };
 
-  const onOpenForm = () => {
-    setShowForm(true);
-    onCloseMenu();
-  };
-
   useEffect(() => {
-    if (isMenuOpen || showForm) {
+    if (isMenuOpen) {
       window.document.body.style.overflow = "hidden";
     } else {
       window.document.body.style.overflow = "";
     }
-  }, [isMenuOpen, showForm, MobileNavRef]);
+  }, [isMenuOpen, MobileNavRef]);
 
   useEffect(() => {
     if (MobileNavRef.current) {
@@ -89,9 +82,9 @@ const Header: FC<HeaderInterface> = ({ darkBG }) => {
             </ul>
           </nav>
 
-          <button onClick={onOpenForm} className={styles.buttonContact}>
+          <Link href="/contacts" className={styles.buttonContact}>
             Contact Us
-          </button>
+          </Link>
 
           <button
             onClick={toggleMenu}
