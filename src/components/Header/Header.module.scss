@@ -104,11 +104,11 @@
     height: 0px;
 
     transition: all 0.3s ease;
+    will-change: height;
 
     &.open {
       margin-top: 30px;
       margin-bottom: 16px;
-      height: auto;
       visibility: visible;
       opacity: 1;
     }
