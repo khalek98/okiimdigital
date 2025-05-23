@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import cn from "classnames";
 
 import styles from "./CTA.module.scss";
@@ -11,7 +12,9 @@ const CTA = () => {
         <p className={styles.description}>
           Turn your traffic into profit with smarter, faster monetization.
         </p>
-        <button className={styles.button}>Contact Us</button>
+        <Link href="/contact" className={styles.button}>
+          Contact Us
+        </Link>
       </div>
     </section>
   );

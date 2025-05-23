@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef } from "react";
+import Link from "next/link";
 import cn from "classnames";
 
 import styles from "./WhatWeDo.module.scss";
@@ -56,7 +57,9 @@ const WhatWeDo = () => {
             boost performance and stay fully compliant, without hurting user
             experience.
           </p>
-          <button className={styles.button}>Let’s Start</button>
+          <Link href="/contact" className={styles.button}>
+            Let’s Start
+          </Link>
         </div>
 
         <ul className={styles.faqList}>

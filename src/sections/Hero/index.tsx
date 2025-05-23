@@ -1,4 +1,5 @@
 import cn from "classnames";
+import Link from "next/link";
 import Image from "next/image";
 
 import HeroImg from "./img/abstract_metalic_shape.png";
@@ -6,15 +7,8 @@ import HeroImg from "./img/abstract_metalic_shape.png";
 import styles from "./Hero.module.scss";
 
 import ArrowIcon from "@/assets/icons/ArrowIcon";
-import { useAppContext } from "@/context/AppContext";
 
 const Hero = () => {
-  const { setShowForm } = useAppContext();
-
-  const onOpenForm = () => {
-    setShowForm(true);
-  };
-
   return (
     <section id="hero" className={styles.Hero}>
       <div className={cn("container", styles.Container)}>
@@ -42,12 +36,12 @@ const Hero = () => {
           compliant, user-first solutions.
         </p>
 
-        <button onClick={onOpenForm} className={styles.Button}>
-          <span>Book a consultation</span>{" "}
+        <Link href={"/contact"} className={styles.Button}>
+          <span>Book a consultation</span>
           <div className={styles.ButtonArrowWrapper}>
             <ArrowIcon className={styles.ButtonArrowIcon} />
           </div>
-        </button>
+        </Link>
       </div>
     </section>
   );
