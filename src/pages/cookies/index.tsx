@@ -15,12 +15,12 @@ const Terms = () => {
       </Head>
 
       <MainLayout darkBG>
-        <section className={styles.CookieSection}>
+        <section className={styles.section}>
           <div className="container">
             <div>
               <h1>Cookie Policy</h1>
 
-              <div className={styles.CookieTextWrapper}>
+              <div className={styles.textWrapper}>
                 <h2>Definitions and key terms</h2>
                 <p>
                   To help explain things as clearly as possible in this Cookie
