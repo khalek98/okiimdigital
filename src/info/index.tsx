@@ -8,7 +8,7 @@ export const info: InfoInterface = {
   address: "Herengracht 124, Amsterdam 1015BT, Netherlands",
   url: "okiimdigital.com",
   descr:
-    "Okiim-Digital helps publishers grow revenue by monetizing traffic through search, CTV, and premium blog placements — with smart, compliant, user-first solutions.",
+    "Okiim-Digital empowers publishers to boost their revenue by monetizing traffic across search, CTV, and high-impact blog placements — using smart, compliant, and user-centric solutions.",
   menuList: [
     {
       menuName: "About",

@@ -24,9 +24,9 @@ const Home: FC = () => {
         <About />
         <Metrics />
         <WhatWeDo />
-        <CTA />
         <WhyChooseUs />
-        <Solutions />
+        {/* <Solutions /> */}
+        <CTA />
       </MainLayout>
     </>
   );

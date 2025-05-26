@@ -52,7 +52,7 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section id="why-choose-us" className={styles.section}>
+    <section id="solutions" className={styles.section}>
       <div className={cn("container", styles.container)}>
         <div className={styles.head}>
           <h2 className={styles.title}>Why Choose Us</h2>

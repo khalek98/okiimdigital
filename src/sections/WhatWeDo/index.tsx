@@ -6,7 +6,7 @@ import styles from "./WhatWeDo.module.scss";
 
 interface FaqItem {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   answer: string;
 }
 
@@ -35,6 +35,11 @@ const faqList: FaqItem[] = [
     subtitle: "Position Your Brand at the Heart of Influential Conversations",
     answer:
       "Leverage the power of exclusive blogs that drive measurable results. Our team builds a personalized product page and places it in front of loyal, interested readers. Boost awareness and increase conversions with our strategic blog promotions.",
+  },
+  {
+    title: "Media Buying",
+    answer:
+      "We simplify ad buying across top-performing media channels, ensuring your campaigns reach the right audience at the optimal time and cost. Our platform unlocks access to exclusive, hard-to-reach traffic sources.",
   },
 ];
 
@@ -112,7 +117,9 @@ const FaqComponent = ({
         ref={faqBodyRef}
         className={cn(styles.faqBody, { [styles.show]: isActive })}
       >
-        <p className={styles.faqSubtitle}>{faqItem.subtitle}</p>
+        {faqItem.subtitle && (
+          <p className={styles.faqSubtitle}>{faqItem.subtitle}</p>
+        )}
         <p className={styles.faqAnswer}>{faqItem.answer}</p>
       </div>
     </li>

@@ -8,11 +8,11 @@ import PortfolioIcon from "./icons/PortfolioIcon";
 import QualityIcon from "./icons/QualityIcon";
 
 const metricList = [
-  {
-    icon: GrowthIcon,
-    title: "150%",
-    description: "Search revenue uplift for partner publishers",
-  },
+  // {
+  //   icon: GrowthIcon,
+  //   title: "150%",
+  //   description: "Search revenue uplift for partner publishers",
+  // },
   {
     icon: StartIcon,
     title: "30M+",

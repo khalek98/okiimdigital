@@ -12,14 +12,15 @@ const Hero = () => {
   return (
     <section id="hero" className={styles.Hero}>
       <div className={cn("container", styles.Container)}>
-        <div className={styles.LabelWrapper}>
+        {/* <div className={styles.LabelWrapper}>
           <span className={styles.Label}>
             Make Every Interaction Count Count
           </span>
-        </div>
+        </div> */}
 
         <h1 className={styles.title}>
-          Helping Publishers Maximize the Value of Their Digital Traffic
+          We help publishers unlock the full value of their traffic by
+          strengthening their brand in a sustainable and results-driven way
         </h1>
 
         <Image
@@ -31,9 +32,9 @@ const Hero = () => {
         />
 
         <p className={styles.description}>
-          Okiim-Digital helps publishers grow revenue by monetizing traffic
-          through search, CTV, and premium blog placements — with smart,
-          compliant, user-first solutions.
+          Okiim-Digital empowers publishers to boost their revenue by monetizing
+          traffic across search, CTV, and high-impact blog placements — using
+          smart, compliant, and user-centric solutions.
         </p>
 
         <Link href={"/contacts"} className={styles.Button}>
