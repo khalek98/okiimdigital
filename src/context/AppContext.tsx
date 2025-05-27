@@ -1,4 +1,8 @@
-import { AppContextProps, AppContextType, SendFormType } from "@/@types/ContextTypes";
+import {
+  AppContextProps,
+  AppContextType,
+  SendFormType,
+} from "@/@types/ContextTypes";
 import { useRouter } from "next/router";
 import { createContext, FC, useContext, useEffect, useState } from "react";
 
@@ -10,7 +14,7 @@ export function useAppContext() {
 
 export const AppContextProvider: FC<AppContextProps> = ({ children }) => {
   const [innerWidth, setInnerWidth] = useState<number>();
-  const [formStatus, setFormStatus] = useState<SendFormType>("hold");
+  const [formStatus, setFormStatus] = useState<SendFormType>("success");
   const [pagePath, setPagePath] = useState<string>("/");
   const [showForm, setShowForm] = useState<boolean>(false);
   const router = useRouter();
@@ -34,7 +38,14 @@ export const AppContextProvider: FC<AppContextProps> = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ innerWidth, formStatus, setFormStatus, pagePath, showForm, setShowForm }}
+      value={{
+        innerWidth,
+        formStatus,
+        setFormStatus,
+        pagePath,
+        showForm,
+        setShowForm,
+      }}
     >
       {children}
     </AppContext.Provider>

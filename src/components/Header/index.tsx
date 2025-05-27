@@ -7,8 +7,10 @@ import { HeaderInterface } from "@/info/info.types";
 
 import styles from "./Header.module.scss";
 import { info } from "@/info";
+import { useAppContext } from "@/context/AppContext";
 
 const Header: FC<HeaderInterface> = ({ darkBG }) => {
+  const { setFormStatus } = useAppContext();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [fixMenu, setFixMenu] = useState<boolean>(false);
   const HeaderRef = useRef<HTMLElement>(null);
@@ -82,7 +84,13 @@ const Header: FC<HeaderInterface> = ({ darkBG }) => {
             </ul>
           </nav>
 
-          <Link href="/contacts" className={styles.buttonContact}>
+          <Link
+            href="/contacts"
+            onClick={() => {
+              setFormStatus("hold");
+            }}
+            className={styles.buttonContact}
+          >
             Contact Us
           </Link>
 

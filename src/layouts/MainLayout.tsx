@@ -140,12 +140,6 @@ const MainLayout = ({
       <main>{children}</main>
       <Footer />
 
-      {formStatus === "success" && (
-        <Notification
-          status={formStatus}
-          message="Message sent successfully!"
-        />
-      )}
       {formStatus === "error" && (
         <Notification
           status={formStatus}

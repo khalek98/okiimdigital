@@ -13,9 +13,13 @@ const Notification: FC<NotificationProps> = ({
   const { formStatus, setFormStatus } = useAppContext();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setFormStatus("hold");
-    }, autoCloseTimeout);
+    let timer: NodeJS.Timeout;
+
+    if (formStatus === "error") {
+      timer = setTimeout(() => {
+        setFormStatus("hold");
+      }, autoCloseTimeout);
+    }
 
     return () => clearTimeout(timer);
   }, []);
@@ -31,7 +35,7 @@ const Notification: FC<NotificationProps> = ({
           className={cn(
             styles.Notification,
             { [styles.success]: status === "success" },
-            { [styles.error]: status === "error" },
+            { [styles.error]: status === "error" }
           )}
         >
           <p className={styles.Message}>{message}</p>
@@ -39,7 +43,7 @@ const Notification: FC<NotificationProps> = ({
             className={cn(
               styles.Button,
               { [styles.success]: status === "success" },
-              { [styles.error]: status === "error" },
+              { [styles.error]: status === "error" }
             )}
             onClick={handleClose}
           >
