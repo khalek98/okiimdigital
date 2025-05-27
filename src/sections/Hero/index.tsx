@@ -19,8 +19,7 @@ const Hero = () => {
         </div> */}
 
         <h1 className={styles.title}>
-          We help publishers unlock the full value of their traffic by
-          strengthening their brand in a sustainable and results-driven way
+          We Help Publishers Unlock the Full Value of Their Traffic
         </h1>
 
         <Image
@@ -32,7 +31,8 @@ const Hero = () => {
         />
 
         <p className={styles.description}>
-          Okiim-Digital empowers publishers to boost their revenue by monetizing
+          Okiim-Digital empowers publishers to boost their by strengthening
+          their brand in a sustainable and results-driven way. We monetize
           traffic across search, CTV, and high-impact blog placements — using
           smart, compliant, and user-centric solutions.
         </p>

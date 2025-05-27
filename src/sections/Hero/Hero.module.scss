@@ -21,64 +21,74 @@
   @include media-md {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 150px;
+    column-gap: 100px;
     justify-items: start;
   }
-}
 
-.LabelWrapper {
-  padding: 8px 20px;
-
-  display: flex;
-  align-items: center;
-  column-gap: 12px;
-
-  border-radius: 1000px;
-  border: 1px solid var(--black-5, rgba(0, 0, 0, 0.05));
-  background: var(
-    --White-Linear,
-    linear-gradient(180deg, #fff 50%, #f8f9fa 100%)
-  );
-}
-
-.Label {
-  color: var(--black-100, #111);
-  text-align: center;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%; /* 19.6px */
-  letter-spacing: 0.14px;
-
-  @include media-md {
-    font-size: 16px;
+  @include media-2xl {
+    column-gap: 100px;
   }
 }
 
+// .LabelWrapper {
+//   padding: 8px 20px;
+
+//   display: flex;
+//   align-items: center;
+//   column-gap: 12px;
+
+//   border-radius: 1000px;
+//   border: 1px solid var(--black-5, rgba(0, 0, 0, 0.05));
+//   background: var(
+//     --White-Linear,
+//     linear-gradient(180deg, #fff 50%, #f8f9fa 100%)
+//   );
+// }
+
+// .Label {
+//   color: var(--black-100, #111);
+//   text-align: center;
+//   font-family: Inter;
+//   font-size: 14px;
+//   font-style: normal;
+//   font-weight: 500;
+//   line-height: 140%; /* 19.6px */
+//   letter-spacing: 0.14px;
+
+//   @include media-md {
+//     font-size: 16px;
+//   }
+// }
+
 .title {
-  // margin-top: 60px;
   max-width: 450px;
 
   color: var(--black-100, #111);
   text-align: center;
   font-family: Inter;
-  font-size: 26px;
+  font-size: 36px;
   font-style: normal;
   font-weight: 600;
   line-height: 120%; /* 38.4px */
 
   @include media-md {
-    // margin-top: 100px;
     max-width: 600px;
 
-    font-size: 40px;
     text-align: left;
   }
 
-  @include media-2xl {
+  @include media-lg {
+    font-size: 48px;
+  }
+
+  @include media-xl {
     max-width: 610px;
-    font-size: 42px;
+    font-size: 58px;
+  }
+
+  @include media-2xl {
+    max-width: none;
+    font-size: 70px;
   }
 }
 
@@ -95,10 +105,15 @@
   line-height: 140%; /* 25.2px */
 
   @include media-md {
-    max-width: 560px;
+    max-width: 520px;
 
     font-size: 20px;
     text-align: left;
+  }
+
+  @include media-2xl {
+    max-width: 720px;
+    font-size: 24px;
   }
 }
 
