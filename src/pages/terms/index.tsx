@@ -27,7 +27,7 @@ const Terms = () => {
 
               <p>
                 These terms and conditions outline the rules and regulations for
-                the use of {info.fullname} Website, located at https://$
+                the use of {info.fullname} Website, located at https://
                 {info.url}/.
               </p>
 
